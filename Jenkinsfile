@@ -1,20 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('Heang') {
-      parallel {
-        stage('Heang') {
-          steps {
-            echo 'Updated message'
-          }
-        }
+    stage("build"){
+      steps{
+        echo 'Building application'
+      }
+    }
 
-        stage('step2') {
-          steps {
-            echo '222222'
-          }
-        }
+    stage("Test"){
+      steps{
+        echo 'Testing application'
+      }
+    }
 
+    stage("Deploy"){
+      steps{
+        echo 'Deploy application'
       }
     }
 
